@@ -13,6 +13,7 @@ public class MyApp extends Application{
         OneSignal.startInit(this)
                 .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
                 .unsubscribeWhenNotificationsAreDisabled(true)
+                .setNotificationReceivedHandler(new NotificationHandler())//gereftane notification va zakhire dar eventbus
                 .init();
         OneSignal.setLogLevel(OneSignal.LOG_LEVEL.NONE, OneSignal.LOG_LEVEL.NONE);
 
